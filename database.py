@@ -17,5 +17,5 @@ connection.commit()
 
 ans = cursor.execute("select * from USERS").fetchall()
 
-for i in ans:
+for i in ans: 
     print(i)
