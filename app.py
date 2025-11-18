@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
+from waitress import serve
 import os
 
 app = Flask(__name__)
@@ -59,4 +60,4 @@ def add_user():
         return render_template('Login.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    serve(app, host='0.0.0.0', port=8000)
